@@ -6,9 +6,9 @@ import method from "micro-method-router";
 
 const products = {
    1234: {
-      title: "Producto 1",
-      description: "Descripcion del producto 1",
-      price: 100,
+      title: "Mate de apx",
+      description: "Descripcion del mate",
+      price: 700,
    },
 };
 
@@ -41,7 +41,8 @@ async function postHandler(req: NextApiRequest, res: NextApiResponse, token) {
             unit_price: product.price,
          },
       ],
-      notification_url: "",
+      notification_url:
+         "https://payments-am3puqw45-alexismunoz1.vercel.app/api/webhooks/mercadopago",
       back_urls: {
          success: "http://apx.school",
       },
