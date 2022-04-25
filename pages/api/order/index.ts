@@ -10,6 +10,11 @@ const products = {
       description: "Descripcion del mate",
       price: 700,
    },
+   1235: {
+      title: "Mate de apx",
+      description: "Descripcion del mate",
+      price: 700,
+   },
 };
 
 async function postHandler(req: NextApiRequest, res: NextApiResponse, token) {
