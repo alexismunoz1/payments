@@ -5,12 +5,7 @@ import { Order } from "lib/models/order";
 import method from "micro-method-router";
 
 const products = {
-   1234: {
-      title: "Mate de apx",
-      description: "Descripcion del mate",
-      price: 700,
-   },
-   1235: {
+   1236: {
       title: "Mate de apx",
       description: "Descripcion del mate",
       price: 700,
