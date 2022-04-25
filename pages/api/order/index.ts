@@ -5,7 +5,7 @@ import { Order } from "lib/models/order";
 import method from "micro-method-router";
 
 const products = {
-   1236: {
+   3456: {
       title: "Mate de apx",
       description: "Descripcion del mate",
       price: 700,
@@ -48,6 +48,7 @@ async function postHandler(req: NextApiRequest, res: NextApiResponse, token) {
       },
    });
 
+   
    res.send({
       url: pref.init_point,
    });
