@@ -7,7 +7,6 @@ import method from "micro-method-router";
 const products = {
    3456: {
       title: "Mate de apx",
-      description: "Descripcion del mate",
       price: 700,
    },
 };
@@ -42,13 +41,12 @@ async function postHandler(req: NextApiRequest, res: NextApiResponse, token) {
          },
       ],
       notification_url:
-         "https://payments-am3puqw45-alexismunoz1.vercel.app/api/webhooks/mercadopago",
+         "https://payments-omega.vercel.app/api/webhooks/mercadopago",
       back_urls: {
          success: "http://apx.school",
       },
    });
 
-   
    res.send({
       url: pref.init_point,
    });
@@ -58,4 +56,4 @@ const handler = method({
    post: postHandler,
 });
 
-export default authMiddleware(postHandler);
+export default authMiddleware(handler);

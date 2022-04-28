@@ -17,10 +17,10 @@ export class Order {
    }
 
    async push() {
-      await this.ref.update(this.data);
+      this.ref.update(this.data);
    }
 
-   static async createNewOrder(newOrderData={}) {
+   static async createNewOrder(newOrderData = {}) {
       const newOrderSnap = await collection.add(newOrderData);
       const newOrder = new Order(newOrderSnap.id);
       newOrder.data = newOrderData;
